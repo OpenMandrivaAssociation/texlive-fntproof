@@ -1,3 +1,9 @@
+# revision 20638
+# category Package
+# catalog-ctan /macros/generic/fntproof
+# catalog-date 2010-12-01 01:24:27 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-fntproof
 Version:	20101201
 Release:	1
@@ -44,6 +50,7 @@ this last purpose are also made available.
 %doc %{_texmfdistdir}/doc/generic/fntproof/README
 %doc %{_texmfdistdir}/doc/generic/fntproof/fntproof-doc.pdf
 %doc %{_texmfdistdir}/doc/generic/fntproof/fntproof-doc.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ this last purpose are also made available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
