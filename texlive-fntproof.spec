@@ -51,3 +51,17 @@ this last purpose are also made available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20101201-2
++ Revision: 752004
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101201-1
++ Revision: 718474
+- texlive-fntproof
+- texlive-fntproof
+- texlive-fntproof
+- texlive-fntproof
+
