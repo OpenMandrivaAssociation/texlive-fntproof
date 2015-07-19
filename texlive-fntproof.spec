@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-fntproof
 Version:	20101201
-Release:	9
+Release:	10
 Summary:	A programmable font test pattern generator
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/fntproof
