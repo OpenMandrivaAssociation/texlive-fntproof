@@ -1,18 +1,12 @@
-# revision 20638
-# category Package
-# catalog-ctan /macros/generic/fntproof
-# catalog-date 2010-12-01 01:24:27 +0100
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-fntproof
-Version:	20190228
+Version:	20638
 Release:	1
 Summary:	A programmable font test pattern generator
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/fntproof
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fntproof.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fntproof.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fntproof.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fntproof.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ to use the commands there. A few additional commands supporting
 this last purpose are also made available.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,24 +38,10 @@ this last purpose are also made available.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20101201-2
-+ Revision: 752004
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101201-1
-+ Revision: 718474
-- texlive-fntproof
-- texlive-fntproof
-- texlive-fntproof
-- texlive-fntproof
-
