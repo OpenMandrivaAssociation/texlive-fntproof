@@ -3,7 +3,7 @@ Version:	20638
 Release:	2
 Summary:	A programmable font test pattern generator
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/fntproof
+URL:		https://www.ctan.org/tex-archive/macros/generic/fntproof
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fntproof.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fntproof.doc.r%{version}.tar.xz
